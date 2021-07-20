@@ -1,0 +1,104 @@
+*
+{
+    padding: 0;
+    margin : 0;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+}
+
+.container
+{
+    display: grid ;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1.2fr 1.5fr 1.2fr 0.5fr ;
+    grid-template-areas: 
+    "Navbar Navbar Navbar Navbar"
+    "Sidebar Main Main Main"
+    "Sidebar Content1 Content2 Content3"
+    "Footer Footer Footer Footer";
+    grid-gap: 2rem;
+
+}
+.Navbar
+{
+    background-color: #B13BF2;
+    border-radius: 10px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-area: Navbar;
+}
+.Sidebar
+{
+    background-color: #F46822;
+    border-radius: 10px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-area: Sidebar;
+}
+.Main
+{
+   background-color: #8EF118;
+    border-radius: 10px;
+    display: grid;
+    justify-content: center;
+    align-items: center; 
+    grid-area: Main;
+}
+.Content1
+{
+    background-color: #EA2B8D;
+    border-radius: 10px;
+    display: grid;
+    justify-content: center;
+    align-items: center; 
+    grid-area: Content1;
+}
+.Content2
+{
+    background-color: #338BF5;
+    border-radius: 10px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-area: Content2;
+}
+.Content3
+{
+    background-color: #3DF156;
+    border-radius: 10px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-area: Content3;
+}
+.Footer
+{
+     background-color: #93F53D;
+    border-radius: 10px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-area: Footer;
+}
+
+@media only screen and (max-width: 550px)
+{
+    .container
+    {
+        grid-gap: 0.2rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas: 
+        "Navbar"
+        "Sidebar"
+        "Main"
+        "Content1"
+        "Content2"
+        "Content3"
+        "Footer" ;
+
+    }
+}
